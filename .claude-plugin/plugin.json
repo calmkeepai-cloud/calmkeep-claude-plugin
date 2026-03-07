@@ -4,6 +4,10 @@
   "description": "Continuity layer for multi-turn architecture and reasoning workflows using Calmkeep.",
   "author": "Calmkeep",
   "repository": "https://github.com/calmkeepai-cloud/calmkeep-claude-plugin",
+  "env": [
+    "CALMKEEP_API_KEY",
+    "CLAUDE_API_KEY"
+  ],
   "skills": [
     "skills/calmkeep-continuity/SKILL.md"
   ]
