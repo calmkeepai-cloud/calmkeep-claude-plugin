@@ -1,0 +1,10 @@
+{
+  "name": "calmkeep-continuity",
+  "version": "0.1.0",
+  "description": "Continuity layer for multi-turn architecture and reasoning workflows using Calmkeep.",
+  "author": "Calmkeep",
+  "repository": "https://github.com/calmkeepai-cloud/calmkeep-claude-plugin",
+  "skills": [
+    "skills/calmkeep-continuity/SKILL.md"
+  ]
+}
