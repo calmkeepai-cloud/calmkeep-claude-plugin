@@ -1,0 +1,11 @@
+{
+  "name": "calmkeep-marketplace",
+  "description": "Marketplace for Calmkeep continuity tools for Claude Code.",
+  "plugins": [
+    {
+      "name": "calmkeep-continuity",
+      "repo": "calmkeepai-cloud/calmkeep-claude-plugin",
+      "path": ".claude-plugin"
+    }
+  ]
+}
