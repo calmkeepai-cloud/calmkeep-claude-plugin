@@ -15,7 +15,7 @@ def main():
 
     client = CalmkeepClient(
         calmkeep_key=calmkeep_key,
-        claude_key=anthropic_key
+        anthropic_key=anthropic_key
     )
 
     response = client.complete(
