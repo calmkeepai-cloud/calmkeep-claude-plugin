@@ -1,13 +1,33 @@
-from calmkeep import CalmkeepClient
 import os
+from calmkeep import CalmkeepClient
 
-client = CalmkeepClient(
-    calmkeep_key=os.getenv("CALMKEEP_API_KEY"),
-    claude_key=os.getenv("ANTHROPIC_API_KEY")
-)
 
-response = client.complete(
-    prompt="Build a multi-tenant SaaS API with consistent architecture."
-)
+def main():
 
-print(response)
+    calmkeep_key = os.getenv("CALMKEEP_API_KEY")
+    anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+
+    if not calmkeep_key:
+        raise RuntimeError("CALMKEEP_API_KEY environment variable not set")
+
+    if not anthropic_key:
+        raise RuntimeError("ANTHROPIC_API_KEY environment variable not set")
+
+    client = CalmkeepClient(
+        calmkeep_key=calmkeep_key,
+        claude_key=anthropic_key
+    )
+
+    response = client.complete(
+        prompt=(
+            "Continue evolving a multi-tenant SaaS API architecture. "
+            "Preserve earlier constraints including RBAC separation, "
+            "tenant isolation, and consistent validation patterns."
+        )
+    )
+
+    print(response)
+
+
+if __name__ == "__main__":
+    main()
